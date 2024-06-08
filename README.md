@@ -20,5 +20,8 @@ and start the app using:
 
 ```streamlit run langchain-chat.py```
 
+![image](https://github.com/RythmSharma96/llama2-chatbot-langchain/assets/62474786/b562663d-0629-46b1-976a-4d0901d0bae8)
+
+
 
 
