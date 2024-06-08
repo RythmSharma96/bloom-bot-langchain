@@ -9,7 +9,6 @@ import langchain
 
 load_dotenv()
 
-i = 0
 #make a chat prompt
 prompt=ChatPromptTemplate.from_messages(
     [
@@ -20,7 +19,7 @@ prompt=ChatPromptTemplate.from_messages(
 
 # streamlit framework
 st.title('Langchain Demo With LLAMA2')
-input_text=st.text_input("Type in here to search...", key=f"unique_key{i}")
+input_text=st.text_input("Type in here to search...", key="input_box")
 
 # ollama llama2 
 llm=Ollama(model="llama2")
