@@ -1,10 +1,5 @@
-# llama2-chatbot-langchain
-An AI powered chatbot that uses langchain and llama2 model to answer queries
-
-You will need to Install Ollama from : https://ollama.com/download
-and install llama2 model locally with the command : 
-
-```ollama run llama2```
+# bloom-bot-langchain
+An AI powered chatbot that uses langchain and bloom model from hugging face to answer queries
 
 [Optional] : create an environment using conda and activate it.
 
@@ -20,8 +15,11 @@ and start the app using:
 
 ```streamlit run langchain-chat.py```
 
-![image](https://github.com/RythmSharma96/llama2-chatbot-langchain/assets/62474786/b562663d-0629-46b1-976a-4d0901d0bae8)
+Prompting:
+A good prompt: Do NOT talk to Bloom as an entity, it's not a chatbot but a webpage/blog/article completion model
 
+For Example:
+![Uploading image.png…]()
 
 
 
