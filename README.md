@@ -19,7 +19,8 @@ Prompting:
 A good prompt: Do NOT talk to Bloom as an entity, it's not a chatbot but a webpage/blog/article completion model
 
 For Example:
-![Uploading image.png…]()
+![image](https://github.com/RythmSharma96/bloom-bot-langchain/assets/62474786/5808aa38-6442-407d-b634-2ce0ac0f897d)
+
 
 
 
