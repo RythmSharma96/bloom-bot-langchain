@@ -2,26 +2,37 @@ from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
 from langchain_community.llms import Ollama
+from langchain_community.llms import HuggingFaceHub
+from langchain_core.prompts import PromptTemplate
 import streamlit as st
 from dotenv import load_dotenv
+import os
 
 
 load_dotenv()
 
+hugging_face_key = os.getenv('HUGGING_FACE_TOKEN')
+
+# Initialize the Hugging Face Hub model
+llm = HuggingFaceHub(
+    repo_id="bigscience/bloom",
+    model_kwargs={"temperature": 0.7,"max_length":1024, "do_sample": True, "top_p": 0.9 },
+    huggingfacehub_api_token=hugging_face_key
+)
+
 #make a chat prompt
 prompt=ChatPromptTemplate.from_messages(
     [
-        ("system","You are a helpful assistant. Please response to the user queries"),
         ("user","Question:{question}")
     ]
 )
 
 # streamlit framework
-st.title('Langchain Demo With LLAMA2')
-input_text=st.text_input("Type in here to search...", key="input_box")
+st.title('Langchain Demo With Bloom')
+input_text=st.text_area("Type below to search. Note: A good prompt: Do NOT talk to Bloom as an entity, it's not a chatbot but a webpage/blog/article completion model",
+                        key="input_box")
 
-# ollama llama2 
-llm=Ollama(model="llama2")
+# llama2 
 output_parser=StrOutputParser()
 chain=prompt|llm|output_parser
 
