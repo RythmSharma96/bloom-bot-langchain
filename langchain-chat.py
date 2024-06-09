@@ -18,7 +18,7 @@ if hugging_face_key is None:
 # Initialize the Hugging Face Hub model
 llm = HuggingFaceHub(
     repo_id="bigscience/bloom",
-    model_kwargs={"temperature": 0.7,"max_length":1024, "do_sample": True, "top_p": 0.9 },
+    model_kwargs={"temperature": 0.2,"max_length":1024, "do_sample": True, "top_p": 0.9 },
     huggingfacehub_api_token=hugging_face_key
 )
 
