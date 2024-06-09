@@ -12,6 +12,8 @@ import os
 load_dotenv()
 
 hugging_face_key = os.getenv('HUGGING_FACE_TOKEN')
+if hugging_face_key is None:
+    hugging_face_key = st.secrets["HUGGING_FACE_TOKEN"]
 
 # Initialize the Hugging Face Hub model
 llm = HuggingFaceHub(
