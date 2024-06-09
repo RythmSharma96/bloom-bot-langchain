@@ -1,6 +1,9 @@
 # bloom-bot-langchain
 An AI powered chatbot that uses langchain and bloom model from hugging face to answer queries
 
+Use it here:
+https://bloom-bot-langchain-ziytmu7tappmecxsnpa6feh.streamlit.app/
+
 [Optional] : create an environment using conda and activate it.
 
 ```conda create --name myenv```
